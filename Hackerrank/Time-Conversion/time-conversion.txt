@@ -1,0 +1,38 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'timeConversion' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts STRING s as parameter.
+     */
+
+    public static String timeConversion(String s) {
+        String Time = s;
+        if(Time.charAt(8)=='A')
+        {
+            if(Time.charAt(0)=='1' && Time.charAt(1)=='2'){
+                Time = "00" + Time.substring(2,8);
+            }
+            else{
+            Time = Time.substring(0,8);
+            }
+        }
+        else{
+        int num = Character.getNumericValue(Time.charAt(1));  
+           if(Time.charAt(0)=='1' && Time.charAt(1)=='2'){
+                 Time =Time.substring(0,8);
+           }
+           else if(Time.charAt(0)=='1'){
