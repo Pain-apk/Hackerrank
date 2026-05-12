@@ -1,0 +1,38 @@
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'beautifulDays' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER i
+     *  2. INTEGER j
+     *  3. INTEGER k
+     */
+
+    public static int beautifulDays(int i, int j, int k) {
+
+  int count = 0;
+    
+    for (int m = i; m <= j; m++) { // Corrected: increment m and 
+    check m <= j
+        int original = m;
+        int reverse = 0;
+        int temp = m; // Use a temporary variable to find the reverse
+        
+        while (temp != 0) {
+            int lastDigit = temp % 10;
+            reverse = (reverse * 10) + lastDigit;
+            temp /= 10; // Reduce temp to eventually break the loop
+        }
+        
+        // Check if the absolute difference is divisible by k
+        if (Math.abs(original - reverse) % k == 0) {
+            count++;
+import java.util.concurrent.*;
+import java.util.function.*;
