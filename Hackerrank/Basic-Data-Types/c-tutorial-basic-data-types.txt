@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    int n;
+    long a;
+    char s;
+    float b;
+    double c;
+    cin >> n >> a >> s >> b >> c;
+    printf("%d\n%ld\n%c\n%.3f\n %.9lf ", n , a, s , b, c);      
+    return 0;
+}
